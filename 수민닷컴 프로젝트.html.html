@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="수민닷컴 프로젝트.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Jua&family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c181361ac7.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Jua&family=Nanum+Pen+Script&family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>🐰SUMIN.com</title>
+</head>
+<body>
+  <div class="nav" id="topbar">
+    <a href="#">🐰</a>
+    <a href="#"><p>수민닷컴</p></a>
+    <i class="fa-solid fa-bars" id="burger"></i>
+  </div>
+
+  <ul class="navbar_menu">
+    <li><a href="#" id="card1m">ABOUT SUMIN</a></li>
+    <li><a href="#" id="card2m">YOON EVENT</a></li>
+  </ul>
+
+  <div class="main">
+  <div class="container">
+    <p id="frontm">스테이씨의 듬직한 귀요미 리더, 수민에 입덕하세요!</p>
+  </div>
+  <div class="containercard" id="card1">
+    <img src="card1.jpg" alt="card1">
+    <div class="cardtext">
+      <p class="cardtitle">스테이씨 수민에 대해 <br> 알아보세요</p>
+      <p class="cardcontent">육각형 아이돌 <br>중저음의 매력 보이스<br>
+      그 외 당신이 궁금할 TMI</p>
+    </div>
+  </div>
+  <div class="containercard" id="card2">
+    <img src="card2.jpg" alt="card2">
+    <div class="cardtext">
+      <p class="cardtitle">시끄러운 자윤이를 <br>빌려드립니다!📢</p>
+      <p class="cardcontent">잠깐! 정말로 <br>빌리시겠습니까?<br>
+      아기호랑이의 위험성을 인지하십시오🐯</p>
+    </div>
+  </div>
+</div>
+  <div class="nav" id="underbar">
+    <p>STAYC를 더 알고 싶다면 아래 페이지를 방문해보세요</p>
+    <div id="iconbox">
+      <a href="https://cafe.daum.net/STAYC" target="_blank"><i class="fa-solid fa-mug-saucer"></i></a>
+      <a href="https://mobile.twitter.com/STAYC_official" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.youtube.com/channel/UCod5V2dpnpJLklGvVOv5FcQ?app=desktop" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.instagram.com/stayc_highup/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p>이 페이지는 팬이 만든 것으로, 하이업 엔터테인먼트와 무관합니다.</p>
+  </div>
+
+  <div class="hidden" id="card1h">
+    <img src="card1h.JPG" alt="card1hidden">
+    <ul>
+      <li>팀에서 리더와 서브보컬, 래퍼를 맡고 있으며, 보컬부터 랩, 춤, 비주얼까지 고루 갖춘 육각형 멤버로 꼽힌다.</li>
+      <li>재이와 함께 저음담당이지만 음역대가 넓고 기본기가 탄탄하다.</li>
+      <li>최단신이고 생활 애교에 강한 토끼리더이지만,<br> 연습 때는 카리스마 있다. 멤버들의 말을 경청해주고 믿음직스럽다.</li>
+      <li>더 자세한 내용은 <a href="https://namu.wiki/w/%EC%88%98%EB%AF%BC(STAYC)" target="_blank">나무위키</a>참조.</li>
+      <li><a href="https://youtu.be/O4yKwQ4s-H0" target="_blank">수민이가 휴가를? 더 알아보기</a></li>
+      <button class="hide" id="closeh1">닫기</button>
+    </ul>
+  </div>
+  <div class="hidden" id="card2h">
+    <img src="2022-03-09 (5).jpg" alt="card2hidden">
+    <ul>
+      <li id="htitle2">***지금 바로 응모하세요!***</li>
+      <label for="">기간
+      <input type="date" name="date1" id="date1" onchange="ok();">
+      <input type="date" name="date2" id="date2" readonly>
+      <li>자윤이 데리고 갈 스윗 구합니다</li>
+      <li>👉<a href="https://youtu.be/63KKDoo3HxQ?t=274" target="_blank">얼마나 시끄러운지 확인하기</a></li>
+      <li>
+
+        <button id="event2">응모</button>
+        <button class="hide" id="closeh2">닫기</button>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <script>
+    $("#card1").on("click", () => {
+      $("#card1h").css("display", "block");
+      $("#frontm").css("display", "none");
+})
+
+    $("#card2").on("click", () => {
+      $("#card2h").css("display", "block");
+      $("#frontm").css("display", "none");
+    })
+
+    $(".hide").on("click", () => {
+      $("#card1h").css("display", "none");
+      $("#card2h").css("display", "none");
+      $("#frontm").css("display", "block");
+    })
+
+    $("#event2").on("click", () => {
+      if ($("#start").val() == "" || 
+      $("#end").val() == "") {
+        alert("날짜를 확인하세요.")
+      }
+      else {
+      alert("자윤이는 바빠요!");}
+    })
+
+    function ok() {
+      var d1 = $('#date1').val().split("-");
+      var d = new Date(eval(d1[0]), eval(d1[1])-1, eval(d1[2]));
+    // +3일
+      d.setDate(d.getDate() + 3);
+      // YYYY-MM-DD 반환
+      var d3=d.toISOString().split("T")[0];
+      // 값 입력
+      $('#date2').val(d3);
+    }
+    /*
+    var d4 = new Date().toISOString().substring(0, 10);
+    var d5 = document.getElementById("date1");
+    d5.value = d4;
+    d5.setAttribute("min", d4);
+    */
+
+    $("#burger").on('click', () => {
+        $(".navbar_menu").toggle('active');
+    })
+
+    $("#card1m").on("click", () => {
+      $("#card1h").css("display", "block");
+      $("#frontm").css("display", "none");
+    })
+
+    $("#card2m").on("click", () => {
+      $("#card2h").css("display", "block");
+      $("#frontm").css("display", "none");
+    })
+
+
+/*
+for (var i=0; i<hidebtn.length; i++) {
+  hidebtn[i].addEventListener("click", closing);
+}
+
+function closing() {
+  card1h.style.display = "none";
+  card2h.style.display = "none";
+  frontm.style.display = "block";
+}*/
+    document.getElementById("date1").min = new Date().toISOString().substring(0, 10);
+  </script>
+</body>
+</html>
